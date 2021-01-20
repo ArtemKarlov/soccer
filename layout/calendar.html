@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .btn-active:active {
+            background-color: darkblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container mx-auto flex flex-col justify-between min-h-screen bg-gray-200 text-white">
+        <header class="px-4 space-x-4 flex justify-between items-center bg-gray-800">
+            <div>
+                <img src="./img/logo-white.png" 
+                    alt="logo" width="100px">
+            </div>
+            <nav class="text-white self-end">
+                <ul class="flex">
+                    <li>
+                        <a href="#" class="block py-1 px-2 hover:bg-gray-900 bg-gray-600">Leagues</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-1 px-2 hover:bg-gray-900">Teams</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-1 px-2 hover:bg-gray-900">Matches</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div>
+                <button class="btn-active p-2 rounded text-white bg-blue-400 hover:bg-blue-600">LogIn</button>
+            </div>
+        </header>
+
+        <main class="px-20 py-8 mb-auto">
+            <h1 class="text-2xl font-bold text-black text-center">League Name</h1>
+            
+            <!-- Filters -->
+            <div class="my-2 p-2 bg-gray-400 rounded">
+                <label class="text-black">From: <input type="date" id="start" name="trip-start"
+                    value="2021-07-22">
+                </label>
+                <label class="text-black">To: <input type="date" id="start" name="trip-start"
+                    value="2021-07-22">
+                </label>
+            </div>
+            
+            <!-- match day -->
+            <div class="my-4 bg-gray-400 rounded">
+                <div class="pt-6 px-10 text-black">
+                    <span>Пт., 22.01</span>
+                </div>
+                <ul class="py-2 px-10 text-black">
+                    <li class="my-2 px-6 flex justify-center bg-gray-600 rounded">
+                        <div class="px-4 py-2 flex space-x-4 justify-center items-center">
+                            <div>
+                                <span>Home Team</span>
+                            </div>
+                            <div>
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_96x96.png" alt="Home Team Logo" class="w-10">
+                            </div>                        
+                        </div>
+                        <div class="w-24 px-4 flex items-center justify-center">
+                            <span class="text-xl">0</span>
+                            <span class="text-xl px-2">-</span>
+                            <span class="text-xl">0</span>
+                        </div>    
+                        <div class="px-4 py-2 flex space-x-4 justify-center items-center">
+                            <div>
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_96x96.png" alt="Home Team Logo" class="w-10">
+                            </div> 
+                            <div>
+                                <span>Guest Team</span>
+                            </div>                       
+                        </div>
+                    </li>
+                    <li class="my-2 px-6 flex justify-center bg-gray-600 rounded">
+                        <div class="px-4 py-2 flex space-x-4 justify-center items-center">
+                            <div>
+                                <span>Home Team</span>
+                            </div>
+                            <div>
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_96x96.png" alt="Home Team Logo" class="w-10">
+                            </div>                        
+                        </div>
+                        <div class="w-24 px-4 flex flex-col items-center justify-center">
+                            <span class="text-xl">23:00</span>
+                        </div>
+    
+                        <div class="px-4 py-2 flex space-x-4 justify-center items-center">
+                            <div>
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_96x96.png" alt="Home Team Logo" class="w-10">
+                            </div> 
+                            <div>
+                                <span>Guest Team</span>
+                            </div>                       
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="my-4 bg-gray-400 rounded">
+                <div class="pt-6 px-10 text-black">
+                    <span>Пт., 22.01</span>
+                </div>
+                <ul class="py-2 px-10 text-black">
+                    <li class="my-2 px-6 flex justify-center bg-gray-600 rounded">
+                        <div class="px-4 py-2 flex space-x-4 justify-center items-center">
+                            <div>
+                                <span>Home Team</span>
+                            </div>
+                            <div>
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_96x96.png" alt="Home Team Logo" class="w-10">
+                            </div>                        
+                        </div>
+                        <div class="w-24 px-4 flex flex-col items-center justify-center">
+                            <span class="text-xl">23:00</span>
+                        </div>
+    
+                        <div class="px-4 py-2 flex space-x-4 justify-center items-center">
+                            <div>
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_96x96.png" alt="Home Team Logo" class="w-10">
+                            </div> 
+                            <div>
+                                <span>Guest Team</span>
+                            </div>                       
+                        </div>
+                    </li>
+                    <li class="my-2 px-6 flex justify-center bg-gray-600 rounded">
+                        <div class="px-4 py-2 flex space-x-4 justify-center items-center">
+                            <div>
+                                <span>Home Team</span>
+                            </div>
+                            <div>
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_96x96.png" alt="Home Team Logo" class="w-10">
+                            </div>                        
+                        </div>
+                        <div class="w-24 px-4 flex flex-col items-center justify-center">
+                            <span class="text-xl">23:00</span>
+                        </div>
+    
+                        <div class="px-4 py-2 flex space-x-4 justify-center items-center">
+                            <div>
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_96x96.png" alt="Home Team Logo" class="w-10">
+                            </div> 
+                            <div>
+                                <span>Guest Team</span>
+                            </div>                       
+                        </div>
+                    </li>
+                    <li class="my-2 px-6 flex justify-center bg-gray-600 rounded">
+                        <div class="px-4 py-2 flex space-x-4 justify-center items-center">
+                            <div>
+                                <span>Home Team</span>
+                            </div>
+                            <div>
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_96x96.png" alt="Home Team Logo" class="w-10">
+                            </div>                        
+                        </div>
+                        <div class="w-24 px-4 flex flex-col items-center justify-center">
+                            <span class="text-xl">23:00</span>
+                        </div>
+    
+                        <div class="px-4 py-2 flex space-x-4 justify-center items-center">
+                            <div>
+                                <img src="https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_96x96.png" alt="Home Team Logo" class="w-10">
+                            </div> 
+                            <div>
+                                <span>Guest Team</span>
+                            </div>                       
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </main>
+
+        <footer class="px-4 h-16 bg-gray-800">
+            <p>2021 SimbirSoft Test</p>
+        </footer>
+
+        
+        
+    </div>
+    
+</body>
+</html>
