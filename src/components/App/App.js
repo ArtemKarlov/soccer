@@ -6,7 +6,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <div>
         <p>Hello</p>
+          <button className="h-20 w-80 bg-red-600 hover:bg-blue-500 focus:bg-green-500 active:bg-gray-500">button</button>
+        </div>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
