@@ -1,5 +1,6 @@
 import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 import logo from '../../img/logo-white.png';
 import Button from "../Button/Button.jsx";
@@ -47,13 +48,22 @@ function Layout() {
                 <nav className="text-white hidden md:block">
                     <ul className="flex space-x-4">
                         <li>
-                            <a href="#" className="block py-2 px-3 bg-gray-900 text-gray-300 rounded-md">Leagues</a>
+                            <Link to="/">
+                                <span className="block py-2 px-3 text-gray-300 rounded-md bg-gray-900">Home</span>
+                            </Link>
+                            {/* <a href="#" className="block py-2 px-3 bg-gray-900 text-gray-300 rounded-md">Home</a> */}
                         </li>
                         <li>
-                            <a href="#" className="block py-2 px-3 hover:bg-gray-700 text-gray-300 rounded-md">Teams</a>
+                            <Link to="/leagues">
+                                <span className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700 ">Leagues</span>
+                            </Link>
+                            {/* <a href="#" className="block py-2 px-3 hover:bg-gray-700 text-gray-300 rounded-md">Leagues</a> */}
                         </li>
                         <li>
-                            <a href="#" className="block py-2 px-3 hover:bg-gray-700 text-gray-300 rounded-md">Matches</a>
+                            <Link to="/teams">
+                                <span className="block py-2 px-3 hover:bg-gray-700 text-gray-300 rounded-md">Teams</span>
+                            </Link>
+                            {/* <a href="#" className="block py-2 px-3 hover:bg-gray-700 text-gray-300 rounded-md">Teams</a> */}
                         </li>
                     </ul>
                 </nav>
