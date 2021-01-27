@@ -12,7 +12,7 @@ function MatchDay(props) {
     return (
         <div className="my-4 bg-gray-400 rounded">
                 <div className="pt-4 px-10 text-black">
-                    <span>Пт., 22.01</span>
+                    <span>Match Day</span>
                 </div>
                 <ul className="py-2 px-1 flex justify-center flex-wrap text-black">
                     {matchDay.matches.map((match) =>
