@@ -37,7 +37,7 @@ function TeamsList(props) {
             .then((data) => {
                 // console.log(data);
                 setTeams([...data.teams]);
-                props.getTeamList(data.teams);
+                // props.getTeamList(data.teams);
             });
         }  
     });

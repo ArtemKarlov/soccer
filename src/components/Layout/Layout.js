@@ -2,7 +2,8 @@ import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
-import logo from '../../img/logo-white.png';
+import LayoutHeader from "../LayoutHeader/LayoutHeader.jsx";
+import Router from "../Router/Router.jsx";
 import Button from "../Button/Button.jsx";
 import CompetitionsList from "../CompetitionsList/CompetitionsList.jsx";
 import TeamsList from "../TeamsList/TeamsList.jsx";
@@ -40,27 +41,7 @@ function Layout() {
 
     return (
         <div className="container mx-auto flex flex-col justify-between min-h-screen bg-gray-200 text-white">
-            <header className="px-4 space-x-4 flex justify-between items-center bg-gray-800">
-                <div>
-                    <img src={logo} 
-                        alt="logo" width="100px" />
-                </div>
-                <nav className="text-white hidden md:block">
-                    <ul className="flex space-x-4">
-                        <li className="block py-2 px-3 text-gray-300 rounded-md bg-gray-900">
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700">
-                            <Link to="/leagues">Leagues</Link>
-                        </li>
-                        <li className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700">
-                            <Link to="/teams">Teams</Link>
-                        </li>
-                    </ul>
-                </nav>
-                <Button name="Log In" />
-                
-            </header>
+            <LayoutHeader />
 
             <main className="px-20 py-8 mb-auto">
 
@@ -72,10 +53,10 @@ function Layout() {
                         <input type="text" className="w-28 p-1 text-black" placeholder="Search" />
                     </label>
                 </div>
-                <CompetitionsList />
-                <TeamsList getTeamList={getTeamList} />
-
-                <MatchDay teams={teamList}/>
+                {/* <CompetitionsList />
+                <TeamsList getTeamList={getTeamList} /> */}
+                <Router />
+                {/* <MatchDay teams={teamList}/> */}
             </main>
 
             <footer className="px-4 h-16 bg-gray-800">
