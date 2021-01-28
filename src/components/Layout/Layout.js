@@ -47,23 +47,14 @@ function Layout() {
                 </div>
                 <nav className="text-white hidden md:block">
                     <ul className="flex space-x-4">
-                        <li>
-                            <Link to="/">
-                                <span className="block py-2 px-3 text-gray-300 rounded-md bg-gray-900">Home</span>
-                            </Link>
-                            {/* <a href="#" className="block py-2 px-3 bg-gray-900 text-gray-300 rounded-md">Home</a> */}
+                        <li className="block py-2 px-3 text-gray-300 rounded-md bg-gray-900">
+                            <Link to="/">Home</Link>
                         </li>
-                        <li>
-                            <Link to="/leagues">
-                                <span className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700 ">Leagues</span>
-                            </Link>
-                            {/* <a href="#" className="block py-2 px-3 hover:bg-gray-700 text-gray-300 rounded-md">Leagues</a> */}
+                        <li className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700">
+                            <Link to="/leagues">Leagues</Link>
                         </li>
-                        <li>
-                            <Link to="/teams">
-                                <span className="block py-2 px-3 hover:bg-gray-700 text-gray-300 rounded-md">Teams</span>
-                            </Link>
-                            {/* <a href="#" className="block py-2 px-3 hover:bg-gray-700 text-gray-300 rounded-md">Teams</a> */}
+                        <li className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700">
+                            <Link to="/teams">Teams</Link>
                         </li>
                     </ul>
                 </nav>
