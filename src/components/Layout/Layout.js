@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import LayoutHeader from "../LayoutHeader/LayoutHeader.jsx";
 import LayoutMain from "../LayoutMain/LayoutMain.jsx";
+import LayoutFooter from "../LayoutFooter/LayoutFooter.jsx";
 
 
 function Layout() {
@@ -43,12 +44,9 @@ function Layout() {
                 </label>
             </div>
             <LayoutMain /> 
-            <footer className="px-4 h-16 bg-gray-800">
-                <p>2021 SimbirSoft Test</p>
-            </footer>        
+            <LayoutFooter />                   
         </div>
     );
   }
   
   export default Layout;
-  

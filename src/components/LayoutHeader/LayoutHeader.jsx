@@ -13,18 +13,18 @@ function LayoutHeader() {
             </div>
             <nav className="text-white hidden md:block">
                 <ul className="flex space-x-4">
-                    <li className="block py-2 px-3 text-gray-300 rounded-md bg-gray-900">
-                        <Link to="/">Home</Link>
+                    <li>
+                        <Link to="/" className="block py-2 px-3 text-gray-300 rounded-md bg-gray-900">Home</Link>
                     </li>
-                    <li className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700">
-                        <Link to="/leagues">Leagues</Link>
+                    <li>
+                        <Link to="/leagues" className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700">Leagues</Link>
                     </li>
-                    <li className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700">
-                        <Link to="/teams">Teams</Link>
+                    <li>
+                        <Link to="/teams" className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700">Teams</Link>
                     </li>
                 </ul>
             </nav>
-            <Button name="Log In" />                
+            <div className="hidden md:block"><Button name="Log In" /></div>                
         </header>
 
     );       
