@@ -26,12 +26,6 @@ function Layout() {
     //     });
     // });
 
-    const [teamList, setTeamList] = useState([]);
-
-    const getTeamList = (value) => {    
-        setTeamList([...value]); 
-    }
-
     return (
         <div className="container mx-auto flex flex-col justify-between min-h-screen bg-gray-200 text-white">
             <LayoutHeader />
