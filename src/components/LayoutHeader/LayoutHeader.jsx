@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import logo from "../../img/logo-white.png";
 import Button from "../Button/Button.jsx";
@@ -14,13 +14,13 @@ function LayoutHeader() {
             <nav className="text-white hidden md:block">
                 <ul className="flex space-x-4">
                     <li>
-                        <Link to="/" className="block py-2 px-3 text-gray-300 rounded-md bg-gray-900">Home</Link>
+                        <NavLink exact to="/" className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700" activeClassName="bg-gray-900">Home</NavLink>
                     </li>
                     <li>
-                        <Link to="/leagues" className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700">Leagues</Link>
+                        <NavLink to="/leagues" className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700" activeClassName="bg-gray-900">Leagues</NavLink>
                     </li>
                     <li>
-                        <Link to="/teams" className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700">Teams</Link>
+                        <NavLink to="/teams" className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700" activeClassName="bg-gray-900">Teams</NavLink>
                     </li>
                 </ul>
             </nav>
