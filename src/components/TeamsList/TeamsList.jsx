@@ -1,27 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 
 import Team from "../Team/Team.jsx";
 
 const API_HOST = "http://api.football-data.org";
-const TOKEN = "873a7beac6284548acc0a6aac3e3f99a"
-const teamsUrl = new URL("v2/teams", API_HOST);
-
-// async function getData(url, token) {
-//     const response = await fetch(url, {
-//         method: 'GET',
-//         headers: {
-//             'X-Auth-Token': token,
-//         },
-//     });
-//     const json = await response.json();
-
-//     return json;
-// }
 
 
 function TeamsList(props) {
 
-    const [teams, setTeams] = useState([]);
+    const teams = props.teamList;
+    const TOKEN = props.token;
+    const teamsUrl = new URL("v2/teams", API_HOST);
 
     useEffect(() => {
         if (teams.length == 0) {
@@ -35,8 +23,6 @@ function TeamsList(props) {
                 return response.json();
             })
             .then((data) => {
-                // console.log(data);
-                setTeams([...data.teams]);
                 props.giveTeamList(data.teams);
             });
         }  
