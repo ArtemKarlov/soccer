@@ -1,9 +1,9 @@
 import React, { useEffect} from "react";
+import { Link } from "react-router-dom";
 
 import Team from "../Team/Team.jsx";
 
-const API_HOST = "http://api.football-data.org";
-
+import { API_HOST } from "../global/global.jsx";
 
 function TeamsList(props) {
 
@@ -32,7 +32,9 @@ function TeamsList(props) {
         <ul className="max-w-md mx-auto p-2">
             { teams.map((team) => 
                 <li key={team.id} className="my-2">
-                    <Team team={team} />
+                    <Link to={`/teams/${team.id}`} className="py-2 px-4 space-x-4 flex justify-start items-center bg-gray-600 rounded hover:bg-gray-700 active:bg-gray-800">
+                        <Team team={team} />
+                    </Link>
                 </li>
             )}                            
         </ul>

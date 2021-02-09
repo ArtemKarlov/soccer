@@ -1,8 +1,9 @@
 import React, { useEffect} from "react";
+import { Link } from "react-router-dom";
 
 import Competition from "../Competition/Competition.jsx";
+import { API_HOST } from "../global/global.jsx";
 
-const API_HOST = "http://api.football-data.org";
 
 function CompetitionsList(props) {
 
@@ -33,7 +34,9 @@ function CompetitionsList(props) {
         <ul className="max-w-md mx-auto p-2">
             { competitions.map((competition) => 
                 <li key={competition.id} className="my-2">
-                    <Competition competition={competition} />
+                    <Link to={`/leagues/${competition.id}`} className="py-2 px-4 space-x-4 flex justify-start items-center bg-gray-600 rounded hover:bg-gray-700 active:bg-gray-800">
+                        <Competition competition={competition} />
+                    </Link>
                 </li>
             )}                            
         </ul>
