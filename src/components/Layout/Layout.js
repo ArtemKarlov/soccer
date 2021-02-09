@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import LayoutHeader from "../LayoutHeader/LayoutHeader.jsx";
 import LayoutMain from "../LayoutMain/LayoutMain.jsx";

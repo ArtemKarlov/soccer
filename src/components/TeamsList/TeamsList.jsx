@@ -12,7 +12,7 @@ function TeamsList(props) {
     const teamsUrl = new URL("v2/teams", API_HOST);
 
     useEffect(() => {
-        if (teams.length == 0) {
+        if (teams.length === 0) {
             fetch(teamsUrl, {
             method: 'GET',
             headers: {
@@ -23,7 +23,7 @@ function TeamsList(props) {
                 return response.json();
             })
             .then((data) => {
-                props.giveTeamList(data.teams);
+                props.returnTeamList(data.teams);
             });
         }  
     });

@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logo from '../../img/logo-white.png';
-
 function Competition(props) {
     
     const { competition } = props;

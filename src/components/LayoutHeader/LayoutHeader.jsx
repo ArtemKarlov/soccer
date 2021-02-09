@@ -1,16 +1,11 @@
 import React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import logo from "../../img/logo-white.png";
 
 
 function LayoutHeader() {
-
     let location = useLocation();
-
-    console.log('path' + location.pathname);
-
-    const classHidden = location.pathname === '/' ? 'hidden' : 'block';
     
     return (
         <header className="px-4 flex bg-gray-800">
@@ -18,8 +13,8 @@ function LayoutHeader() {
                 <img src={logo} 
                     alt="logo" width="100px" />
             </div>
-            <div className="flex flex-grow justify-end items-center">
-                <nav className="text-white hidden md:block">
+            <div className={` ${location.pathname === '/' ? 'hidden' : 'flex'} flex-grow justify-end items-center`}>
+                <nav className="text-white flex flex-grow justify-center">
                     <ul className="flex space-x-2">
                         <li>
                             <NavLink to="/leagues" className="block py-2 px-3 text-gray-300 rounded-md hover:bg-gray-700" activeClassName="bg-gray-900">Leagues</NavLink>
@@ -29,7 +24,7 @@ function LayoutHeader() {
                         </li>
                     </ul>
                 </nav>  
-                <div className="relative text-gray-600">
+                <div className="relative text-gray-600 hidden md:block">
                     <input className="box-border border-1 bg-white h-8 px-5 pr-16 rounded text-sm focus:outline-none" type="search" name="search" placeholder="Search" />
                     <button type="submit" className="absolute right-0 top-0 py-2 px-2 rounded focus:outline-none hover:text-white hover:bg-blue-400 active:bg-blue-600">
                         <svg className="h-4 w-4 fill-current" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" width="512px" height="512px">

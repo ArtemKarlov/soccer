@@ -13,7 +13,7 @@ function CompetitionsList(props) {
     const competitions = props.leagueList;
 
     useEffect(() => {
-        if (competitions.length == 0) {
+        if (competitions.length === 0) {
             fetch(competitionsUrl, {
             method: 'GET',
             headers: {
@@ -24,7 +24,7 @@ function CompetitionsList(props) {
                 return response.json();
             })
             .then((data) => {
-                props.giveLeagueList(data.competitions)
+                props.returnLeagueList(data.competitions)
             });
         }  
     });
