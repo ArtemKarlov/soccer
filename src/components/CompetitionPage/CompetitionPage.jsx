@@ -12,7 +12,7 @@ export default function CompetitionPage(props) {
             <Route exact path="/leagues">
                 <CompetitionsList token={API_TOKEN} leagueList={leagueList} returnLeagueList={getLeagueList} />
             </Route>
-            <Route path="/leagues/:leagueId" 
+            <Route path="/leagues/:leagueId/calendar" 
                 render={(props) => 
                     <div><p className="text-black"> hello {props.match.params.leagueId}</p></div>
                 }                
