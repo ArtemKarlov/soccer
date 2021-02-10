@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import TeamsList from "../TeamsList/TeamsList.jsx";
@@ -9,8 +9,10 @@ import { API_HOST } from "../global/global.jsx";
 export default function TeamPage(props) {
 
     const {token: API_TOKEN, teamList, returnTeamList} = props;
+
+    const test = 'teams';
   
-    const teamsUrl = new URL("v2/teams", API_HOST);
+    const teamsUrl = new URL(`v2/${test}`, API_HOST);
 
     useEffect(() => {
         if (teamList.length === 0) {
@@ -41,7 +43,7 @@ export default function TeamPage(props) {
                 }                
             /> */}
             <Route path="/teams/:teamId/calendar">
-                <MatchDay teams={teamList}/> 
+                <MatchDay teams={teamList} API_TOKEN={API_TOKEN}/> 
             </Route>
         </Switch>
     );

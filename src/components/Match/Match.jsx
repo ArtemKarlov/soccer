@@ -24,8 +24,8 @@ function Match(props) {
 
     let homeTeam = teams.find((team) => team.id === match.homeTeam.id);
     let awayTeam = teams.find((team) => team.id === match.awayTeam.id);
-    homeTeam = (homeTeam !== undefined) ? homeTeam : match.homeTeam;
-    awayTeam = (awayTeam !== undefined) ? awayTeam : match.awayTeam;
+        homeTeam = (homeTeam !== undefined) ? homeTeam : match.homeTeam;
+        awayTeam = (awayTeam !== undefined) ? awayTeam : match.awayTeam;
     const score = match.score.fullTime;    
     const dateOptions = {weekday: 'short', day: 'numeric', month: 'long', year: 'numeric', hour: 'numeric', minute: 'numeric' }
     const matchDate = (new Date(match.utcDate)).toLocaleDateString('ru-RU', dateOptions);
