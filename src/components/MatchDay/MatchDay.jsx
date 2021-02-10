@@ -10,6 +10,8 @@ function MatchDay(props) {
     const { teamId } = useParams();
     const matchesUrl = new URL(`v2/teams/${teamId}/matches`, API_HOST);
 
+    let currentTeam = teams.find((team) => team.id === parseInt(teamId, 10));
+
     const [matches, setMatches] = useState([]);
 
     useEffect(() => {
@@ -31,8 +33,8 @@ function MatchDay(props) {
 
     return (
         <div className="my-4 bg-gray-400 rounded">
-                <div className="pt-4 px-10 text-black">
-                    <span>Match Day {teamId}</span>
+                <div className="pt-4 px-10">
+                    <p className="font-bold text-xl text-gray-800 text-center">{currentTeam.name}</p>
                 </div>
                 <ul className="py-2 px-1 flex justify-center flex-wrap text-black">
                     {matches.map((match) =>
