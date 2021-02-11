@@ -9,10 +9,8 @@ import { API_HOST } from "../global/global.jsx";
 export default function TeamPage(props) {
 
     const {token: API_TOKEN, teamList, returnTeamList} = props;
-
-    const test = 'teams';
   
-    const teamsUrl = new URL(`v2/${test}`, API_HOST);
+    const teamsUrl = new URL("v2/teams", API_HOST);
 
     useEffect(() => {
         if (teamList.length === 0) {
@@ -30,18 +28,12 @@ export default function TeamPage(props) {
             });
         }  
     });
-
     
     return (
         <Switch>
             <Route exact path="/teams">
                 <TeamsList teamList={teamList} />
             </Route>
-            {/* <Route path="/teams/:teamId" 
-                render={(props) => 
-                    <div><p className="text-black"> hello {props.match.params.teamId}</p></div>
-                }                
-            /> */}
             <Route path="/teams/:teamId/calendar">
                 <MatchDay teams={teamList} API_TOKEN={API_TOKEN}/> 
             </Route>

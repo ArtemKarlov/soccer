@@ -4,7 +4,6 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import SingIn from "../SingIn/SingIn.jsx";
 import CompetitionPage from "../CompetitionPage/CompetitionPage.jsx";
 import TeamPage from "../TeamPage/TeamPage.jsx";
-import MatchDay from '../MatchDay/MatchDay.jsx';
 
 function LayoutMain() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,8 +32,6 @@ function LayoutMain() {
                             <Redirect to="/leagues" /> : 
                             <SingIn returnToken={getToken} returnLoggedStatus={getLoggedStatus} />
                     }
-                    
-                    {/* <MatchDay teams={teamList}/> */}
                 </Route>
                 <Route path="/leagues">
                     <CompetitionPage token={API_TOKEN} leagueList={leagueList} returnLeagueList={getLeagueList} />

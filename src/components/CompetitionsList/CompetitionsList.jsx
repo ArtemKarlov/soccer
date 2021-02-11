@@ -8,8 +8,8 @@ import { API_HOST } from "../global/global.jsx";
 function CompetitionsList(props) {
 
     const competitionsUrl = new URL("v2/competitions", API_HOST);
-    competitionsUrl.searchParams.append("plan", "TIER_ONE");
-    competitionsUrl.searchParams.append("areas", "2077");
+        competitionsUrl.searchParams.append("plan", "TIER_ONE");
+        competitionsUrl.searchParams.append("areas", "2077");
     const TOKEN = props.token;
     const competitions = props.leagueList;
 
