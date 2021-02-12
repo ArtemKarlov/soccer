@@ -24,13 +24,13 @@ export default function DateFilter(props) {
         <div className="p-2 bg-gray-400 rounded flex justify-start items-center space-x-3">
             <label className="text-gray-800">
                 <span>From: </span>  
-                <input id="dateFrom" type="date" value={dateFrom} min={formatedMinDateLimit} className="h-8 py-1 text-sm text-gray-800 rounded"
+                <input id="dateFrom" type="date" value={dateFrom} min={formatedMinDateLimit} max={dateTo} className="h-8 py-1 text-sm text-gray-800 rounded"
                     onChange={(event) => setDateFrom(event.target.value)}
                 />
             </label>
             <label className="text-gray-800">
                 <span>To: </span>
-                <input id="dateTo" type="date" value={dateTo} max={formatedMaxDateLimit} className="h-8 py-1 text-sm text-gray-800 rounded" 
+                <input id="dateTo" type="date" value={dateTo} min={dateFrom} max={formatedMaxDateLimit} className="h-8 py-1 text-sm text-gray-800 rounded" 
                     onChange={(event) => setDateTo(event.target.value)}
                 />
             </label>
