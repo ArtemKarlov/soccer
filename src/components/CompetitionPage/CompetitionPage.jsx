@@ -1,16 +1,40 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Route, Switch } from "react-router-dom";
 
 import CompetitionsList from "../CompetitionsList/CompetitionsList.jsx";
+import { API_HOST } from "../global/global.jsx";
+
 
 export default function CompetitionPage(props) {
 
-    const {token: API_TOKEN, leagueList, returnLeagueList: getLeagueList} = props;
+    const {token: API_TOKEN, leagueList, returnLeagueList} = props;
+
+    const competitionsUrl = new URL("v2/competitions", API_HOST);
+        competitionsUrl.searchParams.append("plan", "TIER_ONE");
+        competitionsUrl.searchParams.append("areas", "2077");
+ 
+    useEffect(() => {
+        if (leagueList.length === 0) {
+            fetch(competitionsUrl, {
+            method: 'GET',
+            headers: {
+                'X-Auth-Token': API_TOKEN,
+            },
+            })
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                returnLeagueList(data.competitions)
+            });
+        }  
+    });
+
 
     return (
         <Switch>
             <Route exact path="/leagues">
-                <CompetitionsList token={API_TOKEN} leagueList={leagueList} returnLeagueList={getLeagueList} />
+                <CompetitionsList leagueList={leagueList} />
             </Route>
             <Route path="/leagues/:leagueId/calendar" 
                 render={(props) => 
