@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import { Route, Switch } from "react-router-dom";
 
 import CompetitionsList from "../CompetitionsList/CompetitionsList.jsx";
+import MatchDay from "../MatchDay/MatchDay.jsx";
 import { API_HOST } from "../global/global.jsx";
 
 
@@ -35,6 +36,9 @@ export default function CompetitionPage(props) {
         <Switch>
             <Route exact path="/leagues">
                 <CompetitionsList leagueList={leagueList} />
+            </Route>
+            <Route path="/leagues/:id/calendar" >
+                <MatchDay teams={leagueList} API_TOKEN={API_TOKEN}/> 
             </Route>
             <Route path="/leagues/:leagueId/calendar" 
                 render={(props) => 

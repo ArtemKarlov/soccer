@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import TeamsList from "../TeamsList/TeamsList.jsx";
 import MatchDay from "../MatchDay/MatchDay.jsx";
+import Calendar from "../Calendar/Calendar.jsx";
 
 import { API_HOST } from "../global/global.jsx";
 
@@ -34,8 +35,8 @@ export default function TeamPage(props) {
             <Route exact path="/teams">
                 <TeamsList teamList={teamList} />
             </Route>
-            <Route path="/teams/:teamId/calendar">
-                <MatchDay teams={teamList} API_TOKEN={API_TOKEN}/> 
+            <Route path="/teams/:id/calendar">
+                <Calendar teams={teamList} API_TOKEN={API_TOKEN}/> 
             </Route>
         </Switch>
     );
