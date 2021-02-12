@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from "react";
 import { useLocation, useParams, useRouteMatch } from "react-router-dom";
 
 import Match from "../Match/Match.jsx";
-import Filters from "../Filters/Filters.jsx";
+import DateFilter from "../Filters/DateFilter.jsx";
 
 import { API_HOST } from "../global/global.jsx";
 
@@ -50,7 +50,7 @@ function MatchDay(props) {
 
     return (
         <Fragment>
-            <Filters handleClick={handleFilter} />
+            <DateFilter handleClick={handleFilter} />
             <div className="my-4 bg-gray-400 rounded">
                 <div className="pt-4 px-10">
                     <p className="font-bold text-xl text-gray-800 text-center">{currentTeam.name}</p>

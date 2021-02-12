@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Filters(props) {
+export default function DateFilter(props) {
 
     const [dateFrom, setDateFrom] = useState('');
     const [dateTo, setDateTo] = useState('');
+    const location = useLocation();
 
     const dateRange = 360;
     const maxDateLimit = new Date(dateFrom);
@@ -18,8 +19,6 @@ export default function Filters(props) {
         const formatedDate = date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
         return formatedDate;
     }
-
-    const location = useLocation();
 
     return (
         <div className="p-2 bg-gray-400 rounded flex justify-start items-center space-x-3">
@@ -35,11 +34,6 @@ export default function Filters(props) {
                     onChange={(event) => setDateTo(event.target.value)}
                 />
             </label>
-            {/* <button className="py-1 px-3 rounded text-white bg-blue-400 hover:bg-blue-500 active:bg-blue-800 focus:outline-none"
-                onClick={() => {props.sendDateRange(dateFrom, dateTo)}}
-            >
-                Search
-            </button> */}
             <Link to={`${location.pathname}?dateFrom=${dateFrom ? dateFrom : dateTo ? formatedMinDateLimit : ''}&dateTo=${dateTo ? dateTo : dateFrom ? formatedMaxDateLimit : ''}`} className="py-1 px-4 rounded space-x-4 flex justify-start items-center bg-blue-400 hover:bg-blue-500 active:bg-blue-800" 
                  onClick={() => {props.handleClick()}}
             >
