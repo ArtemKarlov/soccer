@@ -34,7 +34,7 @@ function LayoutMain() {
                     }
                 </Route>
                 <Route path="/leagues">
-                    <CompetitionPage token={API_TOKEN} leagueList={leagueList} returnLeagueList={getLeagueList} />
+                    <CompetitionPage token={API_TOKEN} leagueList={leagueList} teamList={teamList} returnLeagueList={getLeagueList} returnTeamList={getTeamList} />
                 </Route>
                 <Route path="/teams">
                     <TeamPage token={API_TOKEN} teamList={teamList} returnTeamList={getTeamList} />

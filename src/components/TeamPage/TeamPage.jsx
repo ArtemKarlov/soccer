@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import TeamsList from "../TeamsList/TeamsList.jsx";
-import MatchDay from "../MatchDay/MatchDay.jsx";
 import Calendar from "../Calendar/Calendar.jsx";
 
 import { API_HOST } from "../global/global.jsx";
@@ -36,7 +35,7 @@ export default function TeamPage(props) {
                 <TeamsList teamList={teamList} />
             </Route>
             <Route path="/teams/:id/calendar">
-                <Calendar teams={teamList} API_TOKEN={API_TOKEN}/> 
+                <Calendar type="teams" API_TOKEN={API_TOKEN} teams={teamList} calendarOwners={teamList} /> 
             </Route>
         </Switch>
     );
