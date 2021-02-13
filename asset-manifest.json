@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.baa46455.chunk.css",
-    "main.js": "/static/js/main.451cfd77.chunk.js",
-    "main.js.map": "/static/js/main.451cfd77.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d4133c9a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d4133c9a.js.map",
-    "static/js/2.e72467cc.chunk.js": "/static/js/2.e72467cc.chunk.js",
-    "static/js/2.e72467cc.chunk.js.map": "/static/js/2.e72467cc.chunk.js.map",
-    "static/js/3.2b19d502.chunk.js": "/static/js/3.2b19d502.chunk.js",
-    "static/js/3.2b19d502.chunk.js.map": "/static/js/3.2b19d502.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.baa46455.chunk.css.map": "/static/css/main.baa46455.chunk.css.map",
-    "static/js/2.e72467cc.chunk.js.LICENSE.txt": "/static/js/2.e72467cc.chunk.js.LICENSE.txt",
-    "static/media/logo-white.8c28a89a.png": "/static/media/logo-white.8c28a89a.png"
+    "main.css": "/football-app/static/css/main.baa46455.chunk.css",
+    "main.js": "/football-app/static/js/main.451cfd77.chunk.js",
+    "main.js.map": "/football-app/static/js/main.451cfd77.chunk.js.map",
+    "runtime-main.js": "/football-app/static/js/runtime-main.45b7182d.js",
+    "runtime-main.js.map": "/football-app/static/js/runtime-main.45b7182d.js.map",
+    "static/js/2.e72467cc.chunk.js": "/football-app/static/js/2.e72467cc.chunk.js",
+    "static/js/2.e72467cc.chunk.js.map": "/football-app/static/js/2.e72467cc.chunk.js.map",
+    "static/js/3.2b19d502.chunk.js": "/football-app/static/js/3.2b19d502.chunk.js",
+    "static/js/3.2b19d502.chunk.js.map": "/football-app/static/js/3.2b19d502.chunk.js.map",
+    "index.html": "/football-app/index.html",
+    "static/css/main.baa46455.chunk.css.map": "/football-app/static/css/main.baa46455.chunk.css.map",
+    "static/js/2.e72467cc.chunk.js.LICENSE.txt": "/football-app/static/js/2.e72467cc.chunk.js.LICENSE.txt",
+    "static/media/logo-white.8c28a89a.png": "/football-app/static/media/logo-white.8c28a89a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d4133c9a.js",
+    "static/js/runtime-main.45b7182d.js",
     "static/js/2.e72467cc.chunk.js",
     "static/css/main.baa46455.chunk.css",
     "static/js/main.451cfd77.chunk.js"
