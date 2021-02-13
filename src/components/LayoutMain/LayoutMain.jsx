@@ -26,7 +26,7 @@ function LayoutMain() {
   return (
     <main className="px-20 py-8 mb-auto">
       <Switch>
-        {/* <Route path="/">
+        <Route exact path="/">
           {isLoggedIn ? (
             <Redirect to="/leagues" />
           ) : (
@@ -35,7 +35,7 @@ function LayoutMain() {
               returnLoggedStatus={getLoggedStatus}
             />
           )}
-        </Route> */}
+        </Route>
         <Route path="/leagues">
           <CompetitionPage
             token={API_TOKEN}
@@ -51,16 +51,6 @@ function LayoutMain() {
             teamList={teamList}
             returnTeamList={getTeamList}
           />
-        </Route>
-        <Route path="/">
-          {isLoggedIn ? (
-            <Redirect to="/leagues" />
-          ) : (
-            <SingIn
-              returnToken={getToken}
-              returnLoggedStatus={getLoggedStatus}
-            />
-          )}
         </Route>
       </Switch>
     </main>
