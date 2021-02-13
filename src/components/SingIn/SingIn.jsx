@@ -27,7 +27,6 @@ function SingIn(props) {
   return (
     <div className={`px-20 py-4 w-2/3 space-y-4 mx-auto rounded-md ${bgGolor}`}>
       <h2 className="text-black text-lg font-bold text-center">Sing In</h2>
-      <p>873a7beac6284548acc0a6aac3e3f99a</p>
       {/* <form> вопрос с отправкой... */}
       <div className="space-y-4 flex flex-col justify-center item-center">
         <input
