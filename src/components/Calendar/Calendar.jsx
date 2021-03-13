@@ -4,20 +4,20 @@ import { useLocation, useParams } from "react-router-dom";
 import MatchDay from "../MatchDay/MatchDay.jsx";
 import DateFilter from "../Filters/DateFilter.jsx";
 
-import { API_HOST } from "../global/global.jsx";
+import { API_HOST } from "../global/global.js";
 
 export default function Calendar(props) {
   const [matches, setMatches] = useState([]);
   const [isMatchesLoaded, setIsMatchesLoaded] = useState(false);
+  const [calendarName, setCalendrName] = useState("");
 
   const { calendarOwners, API_TOKEN, type, teams } = props;
   const { id } = useParams();
-  const currentCalendarOwner = calendarOwners.find(
-    (owner) => owner.id === parseInt(id, 10)
-  );
+
+  console.log(calendarOwners);
 
   const location = useLocation();
-  const matchesUrl = new URL(`v2/${type}/${id}/matches`, API_HOST);
+  const matchesUrl = new URL(`${type}/${id}/matches`, API_HOST);
 
   function getData(url) {
     fetch(url, {
@@ -48,15 +48,18 @@ export default function Calendar(props) {
       );
       matchesUrl.searchParams.append("dateTo", dateTo !== null ? dateTo : "");
       getData(matchesUrl);
+      setCalendrName(
+        calendarOwners.find((owner) => owner.id === parseInt(id, 10)).name
+      );
       setIsMatchesLoaded(true);
     }
-  });
+  }, [isMatchesLoaded]);
 
   return (
     <Fragment>
       <div className="pt-0 pb-4 px-10">
         <p className="font-bold text-xl text-gray-800 text-center">
-          {currentCalendarOwner.name}
+          {calendarName}
         </p>
       </div>
       <DateFilter handleClick={handleFilter} />

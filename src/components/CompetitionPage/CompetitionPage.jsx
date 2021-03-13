@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import CompetitionsList from "../CompetitionsList/CompetitionsList.jsx";
 import Calendar from "../Calendar/Calendar.jsx";
-import { API_HOST } from "../global/global.jsx";
+import { API_HOST } from "../global/global.js";
 
 export default function CompetitionPage(props) {
   const {
@@ -14,10 +14,10 @@ export default function CompetitionPage(props) {
     returnTeamList,
   } = props;
 
-  const competitionsUrl = new URL("v2/competitions", API_HOST);
+  const competitionsUrl = new URL("competitions", API_HOST);
   competitionsUrl.searchParams.append("plan", "TIER_ONE");
   competitionsUrl.searchParams.append("areas", "2077");
-  const teamsUrl = new URL("v2/teams", API_HOST);
+  const teamsUrl = new URL("teams", API_HOST);
 
   useEffect(() => {
     if (leagueList.length === 0) {

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { API_HOST } from "../global/global.js";
 
 function SingIn(props) {
   const [token, setToken] = useState("");
   const [bgGolor, setBgColor] = useState("bg-gray-400");
 
+
+
   const handleClick = () => {
-    fetch("http://api.football-data.org/v2/competitions/2000", {
+    fetch(`${API_HOST}competitions/2000`, {
       method: "GET",
       headers: {
         "X-Auth-Token": token,

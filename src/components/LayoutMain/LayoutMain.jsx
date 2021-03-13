@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
+import {TOKEN} from "../global/global.js";
 import SingIn from "../SingIn/SingIn.jsx";
 import CompetitionPage from "../CompetitionPage/CompetitionPage.jsx";
 import TeamPage from "../TeamPage/TeamPage.jsx";
 
 function LayoutMain() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true); //set "false" to use SingIn component
   const getLoggedStatus = (value) => {
     setIsLoggedIn(value);
   };
-  const [API_TOKEN, setApiToken] = useState("");
+  const [API_TOKEN, setApiToken] = useState(TOKEN); // set "" to use SingIn component
   const getToken = (value) => {
     setApiToken(value);
   };

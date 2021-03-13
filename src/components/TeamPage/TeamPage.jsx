@@ -4,12 +4,12 @@ import { Route, Switch } from "react-router-dom";
 import TeamsList from "../TeamsList/TeamsList.jsx";
 import Calendar from "../Calendar/Calendar.jsx";
 
-import { API_HOST } from "../global/global.jsx";
+import { API_HOST } from "../global/global.js";
 
 export default function TeamPage(props) {
   const { token: API_TOKEN, teamList, returnTeamList } = props;
 
-  const teamsUrl = new URL("v2/teams", API_HOST);
+  const teamsUrl = new URL("teams", API_HOST);
 
   useEffect(() => {
     if (teamList.length === 0) {
