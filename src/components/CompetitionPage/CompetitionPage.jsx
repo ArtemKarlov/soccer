@@ -3,11 +3,10 @@ import { Route, Switch } from "react-router-dom";
 
 import CompetitionsList from "../CompetitionsList/CompetitionsList.jsx";
 import Calendar from "../Calendar/Calendar.jsx";
-import { API_HOST } from "../global/global.js";
+import { API_HOST, API_TOKEN } from "../global/global.js";
 
 export default function CompetitionPage(props) {
   const {
-    token: API_TOKEN,
     leagueList,
     teamList,
     returnLeagueList,

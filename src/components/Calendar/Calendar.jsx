@@ -4,14 +4,14 @@ import { useLocation, useParams } from "react-router-dom";
 import MatchDay from "../MatchDay/MatchDay.jsx";
 import DateFilter from "../Filters/DateFilter.jsx";
 
-import { API_HOST } from "../global/global.js";
+import { API_HOST, API_TOKEN } from "../global/global.js";
 
 export default function Calendar(props) {
   const [matches, setMatches] = useState([]);
   const [isMatchesLoaded, setIsMatchesLoaded] = useState(false);
   const [calendarName, setCalendrName] = useState("");
 
-  const { calendarOwners, API_TOKEN, type, teams } = props;
+  const { calendarOwners, type, teams } = props;
   const { id } = useParams();
 
   console.log(calendarOwners);
@@ -39,7 +39,7 @@ export default function Calendar(props) {
   };
 
   useEffect(() => {
-    if (!isMatchesLoaded) {
+
       const dateFrom = new URLSearchParams(location.search).get("dateFrom");
       const dateTo = new URLSearchParams(location.search).get("dateTo");
       matchesUrl.searchParams.append(
@@ -48,11 +48,8 @@ export default function Calendar(props) {
       );
       matchesUrl.searchParams.append("dateTo", dateTo !== null ? dateTo : "");
       getData(matchesUrl);
-      setCalendrName(
-        calendarOwners.find((owner) => owner.id === parseInt(id, 10)).name
-      );
       setIsMatchesLoaded(true);
-    }
+
   }, [isMatchesLoaded]);
 
   return (

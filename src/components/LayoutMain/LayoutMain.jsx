@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import {TOKEN} from "../global/global.js";
+import {API_TOKEN as TOKEN} from "../global/global.js";
 import SingIn from "../SingIn/SingIn.jsx";
 import CompetitionPage from "../CompetitionPage/CompetitionPage.jsx";
 import TeamPage from "../TeamPage/TeamPage.jsx";
@@ -39,7 +39,6 @@ function LayoutMain() {
         </Route>
         <Route path="/leagues">
           <CompetitionPage
-            token={API_TOKEN}
             leagueList={leagueList}
             teamList={teamList}
             returnLeagueList={getLeagueList}
@@ -48,7 +47,6 @@ function LayoutMain() {
         </Route>
         <Route path="/teams">
           <TeamPage
-            token={API_TOKEN}
             teamList={teamList}
             returnTeamList={getTeamList}
           />
