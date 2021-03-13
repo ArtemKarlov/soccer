@@ -4,7 +4,7 @@ export default function SearchBar() {
   return (
     <div className="relative text-gray-600">
       <input
-        disabled
+        // disabled
         className="box-border border-1 bg-white h-8 px-5 pr-16 rounded text-sm focus:outline-none"
         type="search"
         name="search"
