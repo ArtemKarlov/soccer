@@ -9,7 +9,7 @@ import { API_HOST, API_TOKEN } from "../global/global.js";
 export default function Calendar(props) {
   const [matches, setMatches] = useState([]);
   const [isMatchesLoaded, setIsMatchesLoaded] = useState(false);
-  const [calendarName, setCalendrName] = useState("");
+  const [calendarName, setCalendrName] = useState(""); //can't use name after upd page, cause props is undefined
 
   const { calendarOwners, type, teams } = props;
   const { id } = useParams();
