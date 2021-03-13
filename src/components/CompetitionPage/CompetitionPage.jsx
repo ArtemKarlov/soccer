@@ -6,12 +6,7 @@ import Calendar from "../Calendar/Calendar.jsx";
 import { API_HOST, API_TOKEN } from "../global/global.js";
 
 export default function CompetitionPage(props) {
-  const {
-    leagueList,
-    teamList,
-    returnLeagueList,
-    returnTeamList,
-  } = props;
+  const { leagueList, teamList, returnLeagueList, returnTeamList } = props;
 
   const competitionsUrl = new URL("competitions", API_HOST);
   competitionsUrl.searchParams.append("plan", "TIER_ONE");

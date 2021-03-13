@@ -39,17 +39,15 @@ export default function Calendar(props) {
   };
 
   useEffect(() => {
-
-      const dateFrom = new URLSearchParams(location.search).get("dateFrom");
-      const dateTo = new URLSearchParams(location.search).get("dateTo");
-      matchesUrl.searchParams.append(
-        "dateFrom",
-        dateFrom !== null ? dateFrom : ""
-      );
-      matchesUrl.searchParams.append("dateTo", dateTo !== null ? dateTo : "");
-      getData(matchesUrl);
-      setIsMatchesLoaded(true);
-
+    const dateFrom = new URLSearchParams(location.search).get("dateFrom");
+    const dateTo = new URLSearchParams(location.search).get("dateTo");
+    matchesUrl.searchParams.append(
+      "dateFrom",
+      dateFrom !== null ? dateFrom : ""
+    );
+    matchesUrl.searchParams.append("dateTo", dateTo !== null ? dateTo : "");
+    getData(matchesUrl);
+    setIsMatchesLoaded(true);
   }, [isMatchesLoaded]);
 
   return (
